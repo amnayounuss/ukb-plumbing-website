@@ -2,7 +2,8 @@
 import React, { useState } from 'react';
 import { 
   Droplet, WrenchIcon, Radiation, FlameKindling, 
-  PenLineIcon, Bath, ShowerHead, Clock
+  PenLineIcon, Bath, ShowerHead, Clock,
+  BadgeCheck
 } from 'lucide-react';
 
 const services = [
@@ -78,6 +79,37 @@ const ServicesSection = () => {
           <p className="text-lg text-ukb-darkgray">
             From emergency repairs to planned installations, our skilled plumbers deliver prompt, reliable solutions for all your plumbing needs.
           </p>
+        </div>
+        
+        {/* Before & After Showcase */}
+        <div className="max-w-5xl mx-auto mb-20 overflow-hidden animate-fade-in">
+          <div className="text-center mb-10">
+            <span className="inline-block px-3 py-1 bg-ukb-lightblue text-ukb-blue text-sm font-medium rounded-full mb-4">
+              Our Work
+            </span>
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">See The Difference We Make</h3>
+            <p className="text-lg text-ukb-darkgray max-w-3xl mx-auto">
+              Our expert plumbers transform problematic plumbing situations into clean, functional systems. Check out our recent before and after work.
+            </p>
+          </div>
+          
+          <div className="rounded-xl overflow-hidden shadow-elevated hover:shadow-lg transition-all duration-300">
+            <img 
+              src="/lovable-uploads/23149db3-347d-471b-8c6e-d1c1e97df011.png" 
+              alt="Before and after plumbing work" 
+              className="w-full h-auto" 
+            />
+            <div className="bg-white p-5 flex justify-between items-center">
+              <div>
+                <h4 className="text-xl font-semibold text-ukb-darkblue">Kitchen Sink Renovation</h4>
+                <p className="text-ukb-darkgray">Complete overhaul of damaged plumbing system</p>
+              </div>
+              <div className="flex items-center text-ukb-blue gap-1">
+                <BadgeCheck className="w-5 h-5" />
+                <span className="font-medium">Professional Quality</span>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
