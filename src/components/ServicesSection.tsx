@@ -1,8 +1,8 @@
 
 import React, { useState } from 'react';
 import { 
-  Droplet, WrenchIcon, Radiator, FlameKindling, 
-  PipeIcon, Bath, KitchenPot, Clock
+  Droplet, WrenchIcon, Radiation, FlameKindling, 
+  PipelineIcon, Bath, ShowerHead, Clock
 } from 'lucide-react';
 
 const services = [
@@ -17,7 +17,7 @@ const services = [
     id: 2,
     title: "Blocked Drain Cleaning",
     description: "Professional removal of blockages in sinks, toilets, showers, and main drainage systems.",
-    icon: <PipeIcon className="w-12 h-12 text-ukb-blue" />,
+    icon: <PipelineIcon className="w-12 h-12 text-ukb-blue" />,
     image: "https://images.unsplash.com/photo-1590496794008-383c8070b257?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
   },
   {
@@ -31,7 +31,7 @@ const services = [
     id: 4,
     title: "Radiator Repairs",
     description: "Expert repair, installation, and maintenance of all types of radiators and heating systems.",
-    icon: <Radiator className="w-12 h-12 text-ukb-blue" />,
+    icon: <Radiation className="w-12 h-12 text-ukb-blue" />,
     image: "https://images.unsplash.com/photo-1591871937573-74dbba515c4c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
   },
   {
@@ -45,14 +45,14 @@ const services = [
     id: 6,
     title: "Pipe Repairs & Replacement",
     description: "Expert repair and replacement of damaged, burst, or corroded pipes using high-quality materials.",
-    icon: <PipeIcon className="w-12 h-12 text-ukb-blue" />,
+    icon: <PipelineIcon className="w-12 h-12 text-ukb-blue" />,
     image: "https://images.unsplash.com/photo-1594741158703-fbd3570b9257?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
   },
   {
     id: 7,
     title: "Bathroom & Kitchen Plumbing",
     description: "Installation and repair of all bathroom and kitchen fixtures, including sinks, toilets, showers, and appliances.",
-    icon: <KitchenPot className="w-12 h-12 text-ukb-blue" />,
+    icon: <ShowerHead className="w-12 h-12 text-ukb-blue" />,
     image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
   },
   {
