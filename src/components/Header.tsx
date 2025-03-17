@@ -27,7 +27,11 @@ const Header = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
         <a href="#" className="flex items-center">
-          <span className="text-2xl font-bold text-ukb-blue">UKB Plumbing</span>
+          <img 
+            src="/lovable-uploads/7dc16efa-a747-4593-ae00-6e7e38c4d44e.png" 
+            alt="UKB Plumbing Logo" 
+            className="h-12 md:h-14"
+          />
         </a>
         
         {/* Desktop Navigation */}
@@ -60,6 +64,13 @@ const Header = () => {
         "fixed inset-0 bg-white z-40 pt-20 px-4 flex flex-col transition-transform duration-300 ease-in-out transform",
         isMenuOpen ? "translate-x-0" : "translate-x-full"
       )}>
+        <div className="flex justify-center mb-8">
+          <img 
+            src="/lovable-uploads/7dc16efa-a747-4593-ae00-6e7e38c4d44e.png" 
+            alt="UKB Plumbing Logo" 
+            className="h-16"
+          />
+        </div>
         <nav className="flex flex-col space-y-6 text-center">
           <a 
             href="#" 

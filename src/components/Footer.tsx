@@ -12,7 +12,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Column 1 - About */}
           <div>
-            <h3 className="text-xl font-bold mb-6">UKB Plumbing</h3>
+            <div className="mb-6">
+              <img 
+                src="/lovable-uploads/7dc16efa-a747-4593-ae00-6e7e38c4d44e.png" 
+                alt="UKB Plumbing Logo" 
+                className="h-16 mb-4"
+              />
+            </div>
             <p className="mb-6 text-white/80">
               Professional plumbing services in Southampton and surrounding areas. Available 24/7 for all your plumbing needs.
             </p>

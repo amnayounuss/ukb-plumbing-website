@@ -12,6 +12,11 @@ import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
+  // Update document title
+  useEffect(() => {
+    document.title = "UKB Plumbing - Professional Plumbing Services in Southampton";
+  }, []);
+
   // Scroll animation handler
   useEffect(() => {
     const handleScroll = () => {
