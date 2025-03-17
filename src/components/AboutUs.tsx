@@ -30,7 +30,7 @@ const AboutUs = () => {
             <span className="inline-block px-3 py-1 bg-ukb-lightblue text-ukb-blue text-sm font-medium rounded-full mb-4 animate-fade-in">
               About UKB Plumbing
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in delay-100">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in delay-100 text-ukb-darkblue">
               Your Trusted Plumbing Partner in Southampton
             </h2>
             <p className="text-lg text-ukb-darkgray mb-6 animate-fade-in delay-200">

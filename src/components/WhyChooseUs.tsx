@@ -44,7 +44,7 @@ const WhyChooseUs = () => {
           <span className="inline-block px-3 py-1 bg-ukb-lightblue text-ukb-blue text-sm font-medium rounded-full mb-4 animate-fade-in">
             Why UKB Plumbing
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in delay-100">Why Choose Our Services?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in delay-100 text-ukb-darkblue" >Why Choose Our Services?</h2>
           <p className="text-lg text-ukb-darkgray animate-fade-in delay-200">
             At UKB Plumbing, we combine expertise, reliability, and exceptional customer service to deliver the best plumbing solutions in Southampton.
           </p>

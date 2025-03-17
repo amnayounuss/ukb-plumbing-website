@@ -94,7 +94,7 @@ const Testimonials = () => {
           <span className="inline-block px-3 py-1 bg-ukb-lightblue text-ukb-blue text-sm font-medium rounded-full mb-4">
             Testimonials
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">What Our Customers Say</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-ukb-darkblue">What Our Customers Say</h2>
           <p className="text-lg text-ukb-darkgray">
             Don't just take our word for it - hear from the people who have experienced our service firsthand.
           </p>

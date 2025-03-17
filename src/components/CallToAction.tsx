@@ -7,10 +7,7 @@ const CallToAction = () => {
     <section className="py-20 relative overflow-hidden">
       {/* Background with gradient overlay */}
       <div 
-        className="absolute inset-0 bg-cover bg-center z-0"
-        style={{ 
-          backgroundImage: "url('/lovable-uploads/dd4e2b99-ddbc-4da0-ab63-2734291ac3f3.png')"
-        }}
+        className="absolute inset-0 bg-cover bg-center z-0 bg-ukb-gray"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-white/10"></div>
       </div>
@@ -59,19 +56,7 @@ const CallToAction = () => {
       </div>
       
       {/* Diagonal cut at bottom */}
-      <div className="absolute bottom-0 left-0 right-0 h-16">
-        <svg 
-          xmlns="http://www.w3.org/2000/svg" 
-          viewBox="0 0 1440 320"
-          className="absolute bottom-0 w-full h-24"
-        >
-          <path 
-            fill="#ffffff" 
-            fillOpacity="1" 
-            d="M0,128L1440,32L1440,320L0,320Z"
-          ></path>
-        </svg>
-      </div>
+     
     </section>
   );
 };

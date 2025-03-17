@@ -13,42 +13,42 @@ const services = [
     title: "Emergency Plumbing Repairs",
     description: "Fast response to all emergency plumbing issues, including burst pipes, leaks, and fixture failures.",
     icon: <WrenchIcon className="w-12 h-12 text-ukb-blue" />,
-    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+    image: "public/lovable-uploads/2ac52104-ff22-4bb7-a6c0-97c18972a297.png"
   },
   {
     id: 2,
     title: "Blocked Drain Cleaning",
     description: "Professional removal of blockages in sinks, toilets, showers, and main drainage systems.",
     icon: <PenLineIcon className="w-12 h-12 text-ukb-blue" />,
-    image: "https://images.unsplash.com/photo-1590496794008-383c8070b257?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
+    image: "public/lovable-uploads/bcc01131-c6c6-4bb6-8e1c-c480243f3429.png"
   },
   {
     id: 3,
     title: "Water Leak Repairs",
     description: "Detection and repair of visible and hidden water leaks to prevent property damage and water waste.",
     icon: <Droplet className="w-12 h-12 text-ukb-blue" />,
-    image: "https://images.unsplash.com/photo-1585704032915-c3400305e979?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80"
+    image: "https://img.freepik.com/free-photo/worker-repairing-water-heater_23-2149334230.jpg?t=st=1742245177~exp=1742248777~hmac=c3bc85399d2b401c7026c4fd425d875360c2326426d9c6b2d74a402f62bcf331&w=996"
   },
   {
     id: 4,
     title: "Radiator Repairs",
     description: "Expert repair, installation, and maintenance of all types of radiators and heating systems.",
     icon: <Radiation className="w-12 h-12 text-ukb-blue" />,
-    image: "https://images.unsplash.com/photo-1591871937573-74dbba515c4c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+    image: "https://img.freepik.com/free-photo/worker-repairing-water-heater_23-2149334227.jpg?t=st=1742245236~exp=1742248836~hmac=1bef076b643196b2f779e52cf55e6b1b4ea06113f8e8ba3103ad965cac6aa5d8&w=996"
   },
   {
     id: 5,
     title: "Boiler Installation & Repair",
     description: "Professional installation, repair, and servicing of all boiler types to ensure efficient and safe operation.",
     icon: <FlameKindling className="w-12 h-12 text-ukb-blue" />,
-    image: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
+    image: "https://img.freepik.com/free-photo/man-installs-heating-system-house-checks-pipes-with-wrench_169016-55834.jpg?t=st=1742245280~exp=1742248880~hmac=196e62ab5af064c38cde6b119405a6bd13c7f67e78591e74f696156d033644e6&w=996"
   },
   {
     id: 6,
     title: "Pipe Repairs & Replacement",
     description: "Expert repair and replacement of damaged, burst, or corroded pipes using high-quality materials.",
     icon: <PenLineIcon className="w-12 h-12 text-ukb-blue" />,
-    image: "https://images.unsplash.com/photo-1594741158703-fbd3570b9257?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+    image: "https://img.freepik.com/free-photo/plumber-assembling-pipe_1098-17772.jpg?t=st=1742245330~exp=1742248930~hmac=b8276909a92e0208159891b0e10240466e858e292c675cbdfe4aa9257f2a594a&w=996"
   },
   {
     id: 7,
@@ -62,7 +62,7 @@ const services = [
     title: "24/7 Emergency Call-Out",
     description: "Round-the-clock availability for emergencies, ensuring you never have to wait for urgent plumbing assistance.",
     icon: <Clock className="w-12 h-12 text-ukb-blue" />,
-    image: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+    image: "https://img.freepik.com/free-vector/24-hour-everyday-service-sticker-design_1017-38078.jpg?t=st=1742245388~exp=1742248988~hmac=5cea157720c7db9f9761c319de5f650f8a5df2f383b754b71daccbc492d94258&w=826"
   }
 ];
 
@@ -77,8 +77,8 @@ const clientWorkImages = [
   },
   {
     id: 2,
-    before: "/lovable-uploads/59483be5-cae8-4a38-9480-3c06eac1ca64.png",
-    after: "/lovable-uploads/e504c29f-444d-4378-91f6-e6c25dcc50c1.png",
+    before: "/lovable-uploads/e504c29f-444d-4378-91f6-e6c25dcc50c1.png",
+    after: "/lovable-uploads/59483be5-cae8-4a38-9480-3c06eac1ca64.png",
     title: "Under-Sink Renovation",
     description: "Fixed leaking pipes and installed modern connections"
   }
@@ -95,7 +95,7 @@ const ServicesSection = () => {
           <span className="inline-block px-3 py-1 bg-ukb-lightblue text-ukb-blue text-sm font-medium rounded-full mb-4">
             Our Expertise
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Comprehensive Plumbing Services</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-ukb-darkblue">Comprehensive Plumbing Services</h2>
           <p className="text-lg text-ukb-darkgray">
             From emergency repairs to planned installations, our skilled plumbers deliver prompt, reliable solutions for all your plumbing needs.
           </p>
@@ -107,7 +107,7 @@ const ServicesSection = () => {
             <span className="inline-block px-3 py-1 bg-ukb-lightblue text-ukb-blue text-sm font-medium rounded-full mb-4">
               Our Work
             </span>
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">See The Difference We Make</h3>
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-ukb-darkblue">See The Difference We Make</h3>
             <p className="text-lg text-ukb-darkgray max-w-3xl mx-auto">
               Our expert plumbers transform problematic plumbing situations into clean, functional systems. Check out our recent before and after work.
             </p>
@@ -138,7 +138,7 @@ const ServicesSection = () => {
             <span className="inline-block px-3 py-1 bg-ukb-lightblue text-ukb-blue text-sm font-medium rounded-full mb-4">
               Client Projects
             </span>
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">Real Client Transformations</h3>
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-ukb-darkblue">Real Client Transformations</h3>
             <p className="text-lg text-ukb-darkgray max-w-3xl mx-auto">
               See the quality of our work through these before and after images from actual client projects.
             </p>

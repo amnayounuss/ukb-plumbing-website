@@ -1,66 +1,68 @@
-
 import React from 'react';
 import { Phone } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <section className="relative h-screen flex items-center overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
-        style={{ 
-          backgroundImage: "url('/lovable-uploads/63d96362-23c8-4a66-856d-3acf81d8cacf.png')",
-        }}
-      >
-        {/* Dark overlay - reduced opacity to let image be more visible */}
-        <div className="absolute inset-0 bg-ukb-darkblue/30"></div>
-      </div>
-      
+    <section className="relative h-screen flex items-center overflow-hidden bg-blue-200">
+      {/* Inline Styles for Animation */}
+      <style>
+        {`
+          @keyframes slideInRight {
+            0% {
+              transform: translateX(100%);
+              opacity: 0;
+            }
+            100% {
+              transform: translateX(0);
+              opacity: 1;
+            }
+          }
+          .animate-slide-in-right {
+            animation: slideInRight 1s ease-out forwards;
+          }
+        `}
+      </style>
+
       {/* Content */}
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-2xl text-white">
-          <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-sm font-medium rounded-full mb-4 animate-fade-in">
+      <div className="container mx-auto px-4 relative z-10 flex justify-between items-center">
+        {/* Left Side: Text Content */}
+        <div className="max-w-2xl text-blue-600">
+          <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm text-ukb-darkblue text-sm font-medium rounded-full mb-4 animate-fade-in">
             Professional Plumbing Services in Southampton
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-shadow animate-fade-in delay-100">
             PLUMBING <span className="text-amber-400">TROUBLES?</span><br />
             <span className="text-white">NO PROBLEM!</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-white/90 animate-fade-in delay-200">
+          <p className="text-xl md:text-2xl mb-8 text-blue-500 animate-fade-in delay-200">
             Need plumbing assistance? Look no further!<br />
             Our expert team is here to save the day.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in delay-300">
-            <a 
-              href="tel:+447954719411" 
-              className="btn-primary flex items-center justify-center gap-2 animate-bounce-subtle"
+            <a
+              href="tel:+447954719411"
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-blue-700 transition animate-bounce-subtle"
             >
               <Phone size={20} />
               <span>Call Now: +44 7954 719411</span>
             </a>
-            <a 
-              href="#services" 
-              className="btn-secondary flex items-center justify-center"
+            <a
+              href="#services"
+              className="bg-white text-blue-600 px-6 py-3 rounded-lg flex items-center justify-center hover:bg-gray-100 transition"
             >
               Our Services
             </a>
           </div>
         </div>
-      </div>
-      
-      {/* Curved shape at the bottom */}
-      <div className="absolute bottom-0 left-0 right-0 h-16 md:h-32">
-        <svg 
-          xmlns="http://www.w3.org/2000/svg" 
-          viewBox="0 0 1440 320" 
-          className="absolute bottom-0 w-full h-full"
-        >
-          <path 
-            fill="#ffffff" 
-            fillOpacity="1" 
-            d="M0,96L80,112C160,128,320,160,480,154.7C640,149,800,107,960,90.7C1120,75,1280,85,1360,90.7L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
-          ></path>
-        </svg>
+
+        {/* Right Side: Relevant Hero Image with Motion */}
+        <div className="hidden md:block  mt-16 ml-10 animate-slide-in-right">
+          <img
+            src="/lovable-uploads/hero.png"
+            alt="Cartoon Plumber with Tools"
+            className="w-full h-auto object-contain drop-shadow-lg"
+          />
+        </div>
       </div>
     </section>
   );
