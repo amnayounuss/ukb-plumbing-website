@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import ServicesSection from '@/components/ServicesSection';
+import ServiceBanner from '@/components/ServiceBanner';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import Testimonials from '@/components/Testimonials';
 import CallToAction from '@/components/CallToAction';
@@ -36,6 +37,7 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <Header />
       <HeroSection />
+      <ServiceBanner />
       <ServicesSection />
       <WhyChooseUs />
       <AboutUs />

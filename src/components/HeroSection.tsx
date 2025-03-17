@@ -9,11 +9,11 @@ const HeroSection = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
         style={{ 
-          backgroundImage: "url('https://images.unsplash.com/photo-1580341289255-5b47c98a59dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')",
+          backgroundImage: "url('/lovable-uploads/63d96362-23c8-4a66-856d-3acf81d8cacf.png')",
         }}
       >
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-ukb-darkblue/50"></div>
+        {/* Dark overlay - reduced opacity to let image be more visible */}
+        <div className="absolute inset-0 bg-ukb-darkblue/30"></div>
       </div>
       
       {/* Content */}
@@ -23,10 +23,12 @@ const HeroSection = () => {
             Professional Plumbing Services in Southampton
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-shadow animate-fade-in delay-100">
-            Fast, Reliable <span className="text-ukb-lightblue">Plumbing Solutions</span>
+            PLUMBING <span className="text-amber-400">TROUBLES?</span><br />
+            <span className="text-white">NO PROBLEM!</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-white/90 animate-fade-in delay-200">
-            Expert plumbers available 24/7 for emergency repairs and all your plumbing needs.
+            Need plumbing assistance? Look no further!<br />
+            Our expert team is here to save the day.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in delay-300">
             <a 
