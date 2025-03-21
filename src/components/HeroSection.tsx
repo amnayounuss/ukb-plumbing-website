@@ -44,7 +44,7 @@ const HeroSection = () => {
               className="bg-blue-600 text-white px-6 py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-blue-700 transition animate-bounce-subtle"
             >
               <Phone size={20} />
-              <span>Call Now: +44 7954 719411</span>
+              <span>Call Now: 07359605766</span>
             </a>
             <a
               href="#services"

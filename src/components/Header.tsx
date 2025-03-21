@@ -45,7 +45,7 @@ const Header = () => {
             className="flex items-center gap-2 font-medium bg-ukb-blue text-white py-2 px-4 rounded-md hover:bg-ukb-darkblue transition-colors"
           >
             <Phone size={16} />
-            <span>+44 7954 719411</span>
+            <span>07359605766</span>
           </a>
         </nav>
         
@@ -106,7 +106,7 @@ const Header = () => {
             onClick={() => setIsMenuOpen(false)}
           >
             <Phone size={18} />
-            <span>+44 7954 719411</span>
+            <span>07359605766</span>
           </a>
         </nav>
       </div>

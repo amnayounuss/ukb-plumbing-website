@@ -62,7 +62,7 @@ const ContactSection = () => {
                   <div>
                     <h4 className="font-medium text-ukb-darkblue mb-1">Phone</h4>
                     <a href="tel:+447954719411" className="text-ukb-darkgray hover:text-ukb-blue transition-colors">
-                      +44 7954 719411
+                      07359605766
                     </a>
                   </div>
                 </div>
