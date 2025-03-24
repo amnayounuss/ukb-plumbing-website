@@ -30,7 +30,7 @@ const Header = () => {
           <img 
             src="/lovable-uploads/7dc16efa-a747-4593-ae00-6e7e38c4d44e.png" 
             alt="UKB Plumbing Logo" 
-            className="h-16 md:h-20 lg:h-24 w-auto object-contain"
+            className="h-16 md:h-15 lg:h-14 w-auto object-contain"
           />
         </a>
         

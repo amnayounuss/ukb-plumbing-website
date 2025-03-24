@@ -13,14 +13,14 @@ const services = [
     title: "Emergency Plumbing Repairs",
     description: "Fast response to all emergency plumbing issues, including burst pipes, leaks, and fixture failures.",
     icon: <WrenchIcon className="w-12 h-12 text-ukb-blue" />,
-    image: "public/lovable-uploads/emergency.png"
+    image: "/lovable-uploads/emergency.png"
   },
   {
     id: 2,
     title: "Blocked Drain Cleaning",
     description: "Professional removal of blockages in sinks, toilets, showers, and main drainage systems.",
     icon: <PenLineIcon className="w-12 h-12 text-ukb-blue" />,
-    image: "public/lovable-uploads/drain.png"
+    image: "/lovable-uploads/drain.png"
   },
   {
     id: 3,
