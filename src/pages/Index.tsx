@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
@@ -10,6 +9,7 @@ import CallToAction from '@/components/CallToAction';
 import AboutUs from '@/components/AboutUs';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
+import BrandCarousel from '@/components/BrandCarousel';
 
 const Index = () => {
   // Update document title
@@ -44,6 +44,7 @@ const Index = () => {
       <HeroSection />
       <ServiceBanner />
       <ServicesSection />
+      <BrandCarousel />
       <WhyChooseUs />
       <AboutUs />
       <Testimonials />
@@ -66,3 +67,4 @@ const Index = () => {
 };
 
 export default Index;
+
