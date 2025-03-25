@@ -1,13 +1,13 @@
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
+  type CarouselApi
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 type BrandLogo = {
   name: string;
@@ -17,29 +17,44 @@ type BrandLogo = {
 
 const brands: BrandLogo[] = [
   {
-    name: "Gas Safe",
-    imageUrl: "/lovable-uploads/51c7ed96-6162-44c7-b299-6d6435fcc7ef.png",
-    altText: "Gas Safe Register logo with Reg No.650452"
-  },
-  {
-    name: "Vaillant",
-    imageUrl: "/lovable-uploads/65dc6790-a822-4a44-aaa8-53821ccde0fd.png",
-    altText: "Vaillant Accredited Installer logo"
-  },
-  {
     name: "Worcester",
-    imageUrl: "/lovable-uploads/b7323488-e8fc-4752-b967-53f6ce4747b0.png",
+    imageUrl: "/lovable-uploads/e05bee3d-ac18-44e1-a2e9-4444f7f8d0fa.png",
     altText: "Worcester Accredited Installer logo"
   },
   {
     name: "Glow Worm",
-    imageUrl: "/lovable-uploads/d20dc75c-6c06-4abc-870b-0ba3161eeac8.png",
+    imageUrl: "/lovable-uploads/8a8f8821-5632-4e6c-80d2-cb46e569845b.png",
     altText: "Glow Worm logo"
+  },
+  {
+    name: "Gas Safe",
+    imageUrl: "/lovable-uploads/324ae4ac-bcca-432d-969b-62863e5f87f9.png",
+    altText: "Gas Safe Register logo"
+  },
+  {
+    name: "Vaillant",
+    imageUrl: "/lovable-uploads/6edbbc26-039a-4f5a-b645-4288b6eef522.png",
+    altText: "Vaillant Accredited Installer logo"
   }
 ];
 
 const BrandCarousel = () => {
   const isMobile = useIsMobile();
+  const [api, setApi] = React.useState<CarouselApi>();
+  const autoplayPlugin = useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: false })
+  );
+  
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    api.on('select', () => {
+      // Restart autoplay on slide change
+      autoplayPlugin.current.reset();
+    });
+  }, [api]);
   
   return (
     <section className="py-16 bg-gray-50">
@@ -69,8 +84,16 @@ const BrandCarousel = () => {
             ))}
           </div>
         ) : (
-          /* Mobile view - carousel */
-          <Carousel className="w-full max-w-md mx-auto">
+          /* Mobile view - carousel with autoplay */
+          <Carousel 
+            className="w-full max-w-md mx-auto"
+            setApi={setApi}
+            plugins={[autoplayPlugin.current]}
+            opts={{
+              align: "center",
+              loop: true
+            }}
+          >
             <CarouselContent>
               {brands.map((brand, index) => (
                 <CarouselItem key={index}>
@@ -85,10 +108,6 @@ const BrandCarousel = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <div className="flex justify-center gap-2 mt-4">
-              <CarouselPrevious className="relative static transform-none translate-y-0 left-0" />
-              <CarouselNext className="relative static transform-none translate-y-0 right-0" />
-            </div>
           </Carousel>
         )}
       </div>
