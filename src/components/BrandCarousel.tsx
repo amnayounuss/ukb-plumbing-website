@@ -12,29 +12,30 @@ import {
 type BrandLogo = {
   name: string;
   imageUrl: string;
+  altText: string;
 };
 
 const brands: BrandLogo[] = [
   {
+    name: "Gas Safe",
+    imageUrl: "/lovable-uploads/51c7ed96-6162-44c7-b299-6d6435fcc7ef.png",
+    altText: "Gas Safe Register logo with Reg No.650452"
+  },
+  {
     name: "Vaillant",
-    imageUrl: "/lovable-uploads/5a6594d5-6019-4ca6-aefe-8ac237e7b78d.png",
+    imageUrl: "/lovable-uploads/65dc6790-a822-4a44-aaa8-53821ccde0fd.png",
+    altText: "Vaillant Accredited Installer logo"
   },
   {
     name: "Worcester",
-    imageUrl: "/lovable-uploads/5a6594d5-6019-4ca6-aefe-8ac237e7b78d.png",
+    imageUrl: "/lovable-uploads/b7323488-e8fc-4752-b967-53f6ce4747b0.png",
+    altText: "Worcester Accredited Installer logo"
   },
   {
     name: "Glow Worm",
-    imageUrl: "/lovable-uploads/5a6594d5-6019-4ca6-aefe-8ac237e7b78d.png",
-  },
-  {
-    name: "Baxi",
-    imageUrl: "/lovable-uploads/5a6594d5-6019-4ca6-aefe-8ac237e7b78d.png",
-  },
-  {
-    name: "Ideal",
-    imageUrl: "/lovable-uploads/5a6594d5-6019-4ca6-aefe-8ac237e7b78d.png",
-  },
+    imageUrl: "/lovable-uploads/d20dc75c-6c06-4abc-870b-0ba3161eeac8.png",
+    altText: "Glow Worm logo"
+  }
 ];
 
 const BrandCarousel = () => {
@@ -60,10 +61,10 @@ const BrandCarousel = () => {
               >
                 <img 
                   src={brand.imageUrl} 
-                  alt={`${brand.name} logo`} 
+                  alt={brand.altText} 
                   className="h-16 object-contain mb-3"
                 />
-                <p className="text-sm font-medium text-gray-700">{brand.name} Accredited Installer</p>
+                <p className="text-sm font-medium text-gray-700">{brand.name}</p>
               </div>
             ))}
           </div>
@@ -76,10 +77,10 @@ const BrandCarousel = () => {
                   <div className="flex flex-col items-center p-6 bg-white rounded-lg shadow-subtle">
                     <img 
                       src={brand.imageUrl} 
-                      alt={`${brand.name} logo`} 
+                      alt={brand.altText} 
                       className="h-16 object-contain mb-3"
                     />
-                    <p className="text-sm font-medium text-gray-700">{brand.name} Accredited Installer</p>
+                    <p className="text-sm font-medium text-gray-700">{brand.name}</p>
                   </div>
                 </CarouselItem>
               ))}
