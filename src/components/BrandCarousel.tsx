@@ -17,24 +17,24 @@ type BrandLogo = {
 
 const brands: BrandLogo[] = [
   {
+    name: "Vaillant",
+    imageUrl: "/lovable-uploads/49e1cf90-c74d-4037-bcbd-dbe506cc2108.png",
+    altText: "Vaillant Accredited Installer logo"
+  },
+  {
     name: "Worcester",
-    imageUrl: "/lovable-uploads/e05bee3d-ac18-44e1-a2e9-4444f7f8d0fa.png",
+    imageUrl: "/lovable-uploads/be8fcfc5-921b-4e89-9bf5-4cb130f86b44.png",
     altText: "Worcester Accredited Installer logo"
   },
   {
     name: "Glow Worm",
-    imageUrl: "/lovable-uploads/8a8f8821-5632-4e6c-80d2-cb46e569845b.png",
+    imageUrl: "/lovable-uploads/0e0e1d58-e270-46d4-ada9-5cf3aa12c713.png",
     altText: "Glow Worm logo"
   },
   {
     name: "Gas Safe",
-    imageUrl: "/lovable-uploads/324ae4ac-bcca-432d-969b-62863e5f87f9.png",
+    imageUrl: "/lovable-uploads/d0641dab-cf90-489f-88c5-e2060752b6d9.png",
     altText: "Gas Safe Register logo"
-  },
-  {
-    name: "Vaillant",
-    imageUrl: "/lovable-uploads/6edbbc26-039a-4f5a-b645-4288b6eef522.png",
-    altText: "Vaillant Accredited Installer logo"
   }
 ];
 
@@ -66,50 +66,31 @@ const BrandCarousel = () => {
           </p>
         </div>
         
-        {/* Desktop view - show all brands in a row */}
-        {!isMobile ? (
-          <div className="hidden md:flex justify-center items-center gap-12 flex-wrap">
+        {/* Desktop view - carousel with autoplay */}
+        <Carousel 
+          className="w-full max-w-4xl mx-auto"
+          setApi={setApi}
+          plugins={[autoplayPlugin.current]}
+          opts={{
+            align: "center",
+            loop: true
+          }}
+        >
+          <CarouselContent>
             {brands.map((brand, index) => (
-              <div 
-                key={index}
-                className="flex flex-col items-center p-6 bg-white rounded-lg shadow-subtle transition-all hover:shadow-elevated"
-              >
-                <img 
-                  src={brand.imageUrl} 
-                  alt={brand.altText} 
-                  className="h-16 object-contain mb-3"
-                />
-                <p className="text-sm font-medium text-gray-700">{brand.name}</p>
-              </div>
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/4">
+                <div className="flex flex-col items-center p-6 bg-white rounded-lg shadow-subtle transition-all hover:shadow-elevated">
+                  <img 
+                    src={brand.imageUrl} 
+                    alt={brand.altText} 
+                    className="h-16 object-contain mb-3"
+                  />
+                  <p className="text-sm font-medium text-gray-700">{brand.name}</p>
+                </div>
+              </CarouselItem>
             ))}
-          </div>
-        ) : (
-          /* Mobile view - carousel with autoplay */
-          <Carousel 
-            className="w-full max-w-md mx-auto"
-            setApi={setApi}
-            plugins={[autoplayPlugin.current]}
-            opts={{
-              align: "center",
-              loop: true
-            }}
-          >
-            <CarouselContent>
-              {brands.map((brand, index) => (
-                <CarouselItem key={index}>
-                  <div className="flex flex-col items-center p-6 bg-white rounded-lg shadow-subtle">
-                    <img 
-                      src={brand.imageUrl} 
-                      alt={brand.altText} 
-                      className="h-16 object-contain mb-3"
-                    />
-                    <p className="text-sm font-medium text-gray-700">{brand.name}</p>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-          </Carousel>
-        )}
+          </CarouselContent>
+        </Carousel>
       </div>
     </section>
   );
