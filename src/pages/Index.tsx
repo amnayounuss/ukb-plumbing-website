@@ -25,19 +25,19 @@ const Index = () => {
     let metaDescription = document.querySelector('meta[name="description"]');
     if (!metaDescription) {
       metaDescription = document.createElement('meta');
-      metaDescription.name = 'description';
+      metaDescription.setAttribute('name', 'description');
       document.head.appendChild(metaDescription);
     }
-    metaDescription.content = "Professional 24/7 emergency plumbing services in Southampton. Same-day plumbing services for urgent plumbing repairs including leaking toilets, showers, taps, gas leak repair, and radiator fixes.";
+    metaDescription.setAttribute('content', "Professional 24/7 emergency plumbing services in Southampton. Same-day plumbing services for urgent plumbing repairs including leaking toilets, showers, taps, gas leak repair, and radiator fixes.");
     
     // Create or update keywords meta tag
     let metaKeywords = document.querySelector('meta[name="keywords"]');
     if (!metaKeywords) {
       metaKeywords = document.createElement('meta');
-      metaKeywords.name = 'keywords';
+      metaKeywords.setAttribute('name', 'keywords');
       document.head.appendChild(metaKeywords);
     }
-    metaKeywords.content = "24/7 emergency plumbing services, urgent plumbing repair, same-day plumbing services, emergency plumbing company, plumbing emergencies, local emergency plumber, affordable emergency plumber, emergency plumbing service Southampton, leaking toilet, leaking shower, leaking tap, gas leak repair, washing machine installation, radiators not working, leaking radiator";
+    metaKeywords.setAttribute('content', "24/7 emergency plumbing services, urgent plumbing repair, same-day plumbing services, emergency plumbing company, plumbing emergencies, local emergency plumber, affordable emergency plumber, emergency plumbing service Southampton, leaking toilet, leaking shower, leaking tap, gas leak repair, washing machine installation, radiators not working, leaking radiator");
   }, []);
 
   // Scroll animation handler

@@ -1,6 +1,27 @@
 
 import React, { useEffect } from 'react';
 
+// Define Google Maps types
+declare global {
+  interface Window {
+    google: {
+      maps: {
+        places: {
+          PlacesService: new (element: HTMLElement) => {
+            getDetails: (
+              request: { placeId: string; fields: string[] },
+              callback: (place: any, status: string) => void
+            ) => void;
+          };
+          PlacesServiceStatus: {
+            OK: string;
+          };
+        };
+      };
+    };
+  }
+}
+
 const GoogleReviews = () => {
   useEffect(() => {
     // Load Google Maps script with place API
@@ -31,14 +52,17 @@ const GoogleReviews = () => {
           displayReviews(place);
         } else {
           console.error('Error fetching Google reviews:', status);
-          document.getElementById('google-reviews-container').innerHTML = 
-            '<p class="text-center text-gray-500">Unable to load reviews at this time. Please check back later.</p>';
+          const container = document.getElementById('google-reviews-container');
+          if (container) {
+            container.innerHTML = 
+              '<p class="text-center text-gray-500">Unable to load reviews at this time. Please check back later.</p>';
+          }
         }
       });
     }
   };
 
-  const displayReviews = (place) => {
+  const displayReviews = (place: any) => {
     const container = document.getElementById('google-reviews-container');
     if (!container) return;
     
@@ -61,7 +85,7 @@ const GoogleReviews = () => {
     if (place.reviews && place.reviews.length > 0) {
       reviewsHtml += '<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">';
       
-      place.reviews.slice(0, 6).forEach(review => {
+      place.reviews.slice(0, 6).forEach((review: any) => {
         reviewsHtml += `
           <div class="bg-white rounded-lg shadow-subtle p-6 flex flex-col">
             <div class="flex items-center mb-4">
@@ -102,7 +126,7 @@ const GoogleReviews = () => {
     container.innerHTML = reviewsHtml;
   };
 
-  const generateStars = (rating) => {
+  const generateStars = (rating: number) => {
     const fullStars = Math.floor(rating);
     const halfStar = rating % 1 >= 0.5;
     const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
@@ -127,13 +151,13 @@ const GoogleReviews = () => {
     return starsHtml;
   };
 
-  const truncateText = (text, maxLength) => {
+  const truncateText = (text: string | undefined, maxLength: number) => {
     if (!text) return '';
     if (text.length <= maxLength) return text;
     return text.substring(0, maxLength) + '...';
   };
 
-  const formatReviewTime = (timestamp) => {
+  const formatReviewTime = (timestamp: number | undefined) => {
     if (!timestamp) return '';
     const date = new Date(timestamp * 1000);
     return date.toLocaleDateString();
