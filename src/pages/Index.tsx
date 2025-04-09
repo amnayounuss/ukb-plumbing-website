@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
@@ -10,11 +11,33 @@ import AboutUs from '@/components/AboutUs';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 import BrandCarousel from '@/components/BrandCarousel';
+import AnnouncementBar from '@/components/AnnouncementBar';
+import GoogleReviews from '@/components/GoogleReviews';
+import LiveChat from '@/components/LiveChat';
 
 const Index = () => {
-  // Update document title
+  // Update document title and meta tags
   useEffect(() => {
-    document.title = "UKB Plumbing - Professional Plumbing Services in Southampton";
+    // Set document title with keywords
+    document.title = "UKB Plumbing - 24/7 Emergency Plumbing Services in Southampton";
+    
+    // Create or update meta description
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (!metaDescription) {
+      metaDescription = document.createElement('meta');
+      metaDescription.name = 'description';
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.content = "Professional 24/7 emergency plumbing services in Southampton. Same-day plumbing services for urgent plumbing repairs including leaking toilets, showers, taps, gas leak repair, and radiator fixes.";
+    
+    // Create or update keywords meta tag
+    let metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (!metaKeywords) {
+      metaKeywords = document.createElement('meta');
+      metaKeywords.name = 'keywords';
+      document.head.appendChild(metaKeywords);
+    }
+    metaKeywords.content = "24/7 emergency plumbing services, urgent plumbing repair, same-day plumbing services, emergency plumbing company, plumbing emergencies, local emergency plumber, affordable emergency plumber, emergency plumbing service Southampton, leaking toilet, leaking shower, leaking tap, gas leak repair, washing machine installation, radiators not working, leaking radiator";
   }, []);
 
   // Scroll animation handler
@@ -40,17 +63,20 @@ const Index = () => {
   
   return (
     <div className="min-h-screen bg-white">
+      <AnnouncementBar />
       <Header />
       <HeroSection />
       <ServiceBanner />
       <ServicesSection />
       <BrandCarousel />
       <WhyChooseUs />
+      <GoogleReviews />
       <AboutUs />
       <Testimonials />
       <CallToAction />
       <ContactSection />
       <Footer />
+      <LiveChat />
       
       {/* Scroll to top button */}
       <button
@@ -67,4 +93,3 @@ const Index = () => {
 };
 
 export default Index;
-
