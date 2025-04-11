@@ -18,11 +18,11 @@ const CallToAction = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="text-left md:max-w-2xl">
               <h2 className="text-3xl md:text-4xl font-bold text-black mb-6 animate-fade-in">
-                Plumbing Problems?<br />
+                Plumbing Emergencies?<br />
                 <span className="text-ukb-blue">We're Ready 24/7!</span>
               </h2>
               <p className="text-xl text-black/90 mb-8 animate-fade-in delay-100">
-                Save 10% on emergency plumbing services. Call now for immediate assistance and expert solutions!
+                Need a local emergency plumber for leaking toilet, leaking shower, leaking tap, gas leak repair, washing machine installation, radiators not working, or leaking radiator problems? Our same-day plumbing services are available for all urgent plumbing repair needs in Southampton. Call our affordable emergency plumber team now!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 animate-fade-in delay-200">
                 <a 
@@ -36,8 +36,8 @@ const CallToAction = () => {
                     <Phone className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <div className="text-sm text-gray-600">Phone Number:</div>
-                    <a href="tel:+447954719411" className="font-semibold text-lg text-ukb-darkblue hover:text-ukb-blue transition-colors">
+                    <div className="text-sm text-gray-600">24/7 Emergency Plumbing Services:</div>
+                    <a href="tel:07359605766" className="font-semibold text-lg text-ukb-darkblue hover:text-ukb-blue transition-colors">
                       07359605766
                     </a>
                   </div>
@@ -54,9 +54,6 @@ const CallToAction = () => {
           </div>
         </div>
       </div>
-      
-      {/* Diagonal cut at bottom */}
-     
     </section>
   );
 };

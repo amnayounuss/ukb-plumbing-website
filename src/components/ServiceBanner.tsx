@@ -18,7 +18,7 @@ const ServiceBanner = () => {
               </div>
               <h2 className="text-3xl font-bold text-center mb-4 text-ukb-darkblue">Established 2003</h2>
               <p className="text-lg text-center text-gray-700 mb-6">
-                Professional plumbing services you can trust. With over 20 years of experience, we provide affordable emergency plumber services for leaking radiator issues, washing machine installation, and all urgent plumbing repair needs.
+                Professional plumbing services you can trust. With over 20 years of experience, we provide affordable emergency plumber services in Southampton for leaking toilet, leaking shower, leaking tap, gas leak repair, radiators not working, and leaking radiator issues. Our local emergency plumber team is available 24/7 for all your plumbing emergencies.
               </p>
               <div className="flex justify-center">
                 <a 

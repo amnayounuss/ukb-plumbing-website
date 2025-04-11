@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Phone } from "lucide-react";
 const HeroSection = () => {
@@ -32,17 +33,16 @@ const HeroSection = () => {
             Professional Plumbing Services in Southampton
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-            PLUMBING <span className="text-yellow-400">PLUMBING EMERGENCIES?
-NO PROBLEM!</span>
+            PLUMBING <span className="text-yellow-400">EMERGENCIES?</span>
             <br />
             <span className="text-white">NO PROBLEM!</span>
           </h1>
           <p className="text-lg md:text-xl mb-8 text-gray-200">
-            Need plumbing assistance? Look no further!<br />
-            Our expert team is here to save the day.
+            Need urgent plumbing repair for leaking toilet, leaking shower, or leaking tap issues? Our emergency plumbing company is here for all your plumbing emergencies!<br />
+            From gas leak repair to washing machine installation, radiators not working to leaking radiator problems - our expert team is available for same-day plumbing services in Southampton.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <a href="tel:+447954719411" className="bg-yellow-400 text-gray-900 px-6 py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-yellow-500 transition font-semibold">
+            <a href="tel:+447359605766" className="bg-yellow-400 text-gray-900 px-6 py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-yellow-500 transition font-semibold">
               <Phone size={20} />
               <span>Call Now: 07359605766</span>
             </a>
