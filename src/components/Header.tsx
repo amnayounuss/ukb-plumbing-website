@@ -42,11 +42,11 @@ const Header = () => {
           )}
         >
           <a href="/" className="font-medium hover:text-ukb-blue transition-colors">Home</a>
-          <a href="/about" className="font-medium hover:text-ukb-blue transition-colors">About Us</a>
-          <a href="/services" className="font-medium hover:text-ukb-blue transition-colors">Services</a>
+          <a href="/#services" className="font-medium hover:text-ukb-blue transition-colors">Services</a>
+          <a href="/#about" className="font-medium hover:text-ukb-blue transition-colors">About Us</a>
+          <a href="/#contact" className="font-medium hover:text-ukb-blue transition-colors">Contact</a>
           <a href="/privacy-policy" className="font-medium hover:text-ukb-blue transition-colors">Privacy Policy</a>
           <a href="/terms-conditions" className="font-medium hover:text-ukb-blue transition-colors">Terms & Conditions</a>
-          <a href="#contact" className="font-medium hover:text-ukb-blue transition-colors">Contact</a>
           <a
             href="tel:07359605766"
             className="flex items-center gap-2 font-medium bg-ukb-blue text-white py-2 px-4 rounded-md hover:bg-ukb-darkblue transition-colors"
@@ -86,20 +86,20 @@ const Header = () => {
           <a href="/" className="font-medium text-xl text-ukb-darkblue py-2 border-b border-gray-100" onClick={() => setIsMenuOpen(false)}>
             Home
           </a>
-          <a href="/about" className="font-medium text-xl text-ukb-darkblue py-2 border-b border-gray-100" onClick={() => setIsMenuOpen(false)}>
+          <a href="/#services" className="font-medium text-xl text-ukb-darkblue py-2 border-b border-gray-100" onClick={() => setIsMenuOpen(false)}>
+            Services
+          </a>
+          <a href="/#about" className="font-medium text-xl text-ukb-darkblue py-2 border-b border-gray-100" onClick={() => setIsMenuOpen(false)}>
             About Us
           </a>
-          <a href="/services" className="font-medium text-xl text-ukb-darkblue py-2 border-b border-gray-100" onClick={() => setIsMenuOpen(false)}>
-            Services
+          <a href="/#contact" className="font-medium text-xl text-ukb-darkblue py-2 border-b border-gray-100" onClick={() => setIsMenuOpen(false)}>
+            Contact
           </a>
           <a href="/privacy-policy" className="font-medium text-xl text-ukb-darkblue py-2 border-b border-gray-100" onClick={() => setIsMenuOpen(false)}>
             Privacy Policy
           </a>
           <a href="/terms-conditions" className="font-medium text-xl text-ukb-darkblue py-2 border-b border-gray-100" onClick={() => setIsMenuOpen(false)}>
             Terms & Conditions
-          </a>
-          <a href="#contact" className="font-medium text-xl text-ukb-darkblue py-2 border-b border-gray-100" onClick={() => setIsMenuOpen(false)}>
-            Contact
           </a>
           <a
             href="tel:07359605766"

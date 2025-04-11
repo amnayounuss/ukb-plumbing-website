@@ -43,19 +43,19 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-6">Our Services</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#services" className="text-white/80 hover:text-white transition-colors">Emergency Plumbing</a>
+                <a href="/#services" className="text-white/80 hover:text-white transition-colors">Emergency Plumbing</a>
               </li>
               <li>
-                <a href="#services" className="text-white/80 hover:text-white transition-colors">Blocked Drains</a>
+                <a href="/#services" className="text-white/80 hover:text-white transition-colors">Blocked Drains</a>
               </li>
               <li>
-                <a href="#services" className="text-white/80 hover:text-white transition-colors">Water Leak Repairs</a>
+                <a href="/#services" className="text-white/80 hover:text-white transition-colors">Water Leak Repairs</a>
               </li>
               <li>
-                <a href="#services" className="text-white/80 hover:text-white transition-colors">Radiator Repairs</a>
+                <a href="/#services" className="text-white/80 hover:text-white transition-colors">Radiator Repairs</a>
               </li>
               <li>
-                <a href="#services" className="text-white/80 hover:text-white transition-colors">Boiler Services</a>
+                <a href="/#services" className="text-white/80 hover:text-white transition-colors">Boiler Services</a>
               </li>
             </ul>
           </div>
@@ -65,19 +65,19 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-6">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-white/80 hover:text-white transition-colors">Home</a>
+                <a href="/" className="text-white/80 hover:text-white transition-colors">Home</a>
               </li>
               <li>
-                <a href="#about" className="text-white/80 hover:text-white transition-colors">About Us</a>
+                <a href="/#about" className="text-white/80 hover:text-white transition-colors">About Us</a>
               </li>
               <li>
-                <a href="#services" className="text-white/80 hover:text-white transition-colors">Services</a>
+                <a href="/#services" className="text-white/80 hover:text-white transition-colors">Services</a>
               </li>
               <li>
-                <a href="#contact" className="text-white/80 hover:text-white transition-colors">Contact</a>
+                <a href="/#contact" className="text-white/80 hover:text-white transition-colors">Contact</a>
               </li>
               <li>
-                <a href="#" className="text-white/80 hover:text-white transition-colors">Privacy Policy</a>
+                <a href="/privacy-policy" className="text-white/80 hover:text-white transition-colors">Privacy Policy</a>
               </li>
             </ul>
           </div>
