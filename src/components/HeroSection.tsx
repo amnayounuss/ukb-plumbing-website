@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Phone } from "lucide-react";
 
@@ -31,20 +32,20 @@ const HeroSection = () => {
         {/* Left Side: Text Content */}
         <div className="max-w-2xl text-white">
           <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm text-sm font-medium rounded-full mb-4">
-            Professional Plumbing Services in Southampton
+            24/7 Emergency Plumbing Services in Southampton
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-            PLUMBING <span className="text-yellow-400">TROUBLES?</span>
+            PLUMBING <span className="text-yellow-400">EMERGENCIES?</span>
             <br />
             <span className="text-white">NO PROBLEM!</span>
           </h1>
           <p className="text-lg md:text-xl mb-8 text-gray-200">
-            Need plumbing assistance? Look no further!<br />
-            Our expert team is here to save the day.
+            Same-day plumbing services for urgent plumbing repair needs!<br />
+            From leaking toilets and showers to gas leak repair, your local emergency plumber is here to help.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="tel:+447954719411"
+              href="tel:07359605766"
               className="bg-yellow-400 text-gray-900 px-6 py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-yellow-500 transition font-semibold"
             >
               <Phone size={20} />
@@ -63,7 +64,7 @@ const HeroSection = () => {
         <div className="hidden md:block mt-16 ml-10 animate-slide-in-right">
           <img
             src="/lovable-uploads/hero.png"
-            alt="Cartoon Plumber with Tools"
+            alt="Emergency Plumbing Company Professional"
             className="w-full h-auto object-contain drop-shadow-lg"
           />
         </div>

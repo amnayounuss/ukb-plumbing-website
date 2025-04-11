@@ -18,15 +18,15 @@ const ServiceBanner = () => {
               </div>
               <h2 className="text-3xl font-bold text-center mb-4 text-ukb-darkblue">Established 2003</h2>
               <p className="text-lg text-center text-gray-700 mb-6">
-                Professional plumbing services you can trust. With over 20 years of experience, we provide quality workmanship and reliable service.
+                Professional plumbing services you can trust. With over 20 years of experience, we provide affordable emergency plumber services for leaking radiator issues, washing machine installation, and all urgent plumbing repair needs.
               </p>
               <div className="flex justify-center">
                 <a 
-                  href="tel:+447954719411" 
+                  href="tel:07359605766" 
                   className="flex items-center gap-2 btn-primary"
                 >
                   <Phone size={20} />
-                  <span>Call Us Now</span>
+                  <span>Call Our Emergency Plumbing Company Now</span>
                 </a>
               </div>
             </div>
@@ -35,7 +35,7 @@ const ServiceBanner = () => {
             <div className="bg-white rounded-2xl shadow-elevated overflow-hidden animate-fade-in">
               <img 
                 src="/lovable-uploads/dd4e2b99-ddbc-4da0-ab63-2734291ac3f3.png" 
-                alt="UKB Plumbing Services" 
+                alt="Radiators Not Working Repair Services" 
                 className="w-full h-auto"
               />
             </div>
