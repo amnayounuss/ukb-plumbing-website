@@ -142,12 +142,12 @@ const Footer = () => {
           <div className="mt-4 md:mt-0">
             <ul className="flex flex-wrap justify-center space-x-6">
               <li>
-                <a href="#" className="text-white/70 hover:text-white text-sm transition-colors">
+                <a href="/terms-conditions" className="text-white/70 hover:text-white text-sm transition-colors">
                   Terms & Conditions
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/70 hover:text-white text-sm transition-colors">
+                <a href="/privacy-policy" className="text-white/70 hover:text-white text-sm transition-colors">
                   Privacy Policy
                 </a>
               </li>
