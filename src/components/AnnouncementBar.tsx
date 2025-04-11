@@ -91,36 +91,6 @@ const AnnouncementBar = () => {
           {isLight ? null : <path d="M19.07 4.93l-1.41 1.41"></path>}
         </svg>
       </button>
-
-      {/* Add CSS for the marquee animation */}
-      <style jsx>{`
-        .marquee-container {
-          width: 100%;
-          overflow: hidden;
-          white-space: nowrap;
-        }
-        
-        .marquee-content {
-          display: inline-block;
-          animation: marquee 30s linear infinite;
-          padding-left: 100%;
-        }
-        
-        @keyframes marquee {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-100%);
-          }
-        }
-        
-        @media (max-width: 768px) {
-          .marquee-content {
-            animation: marquee 20s linear infinite;
-          }
-        }
-      `}</style>
     </div>
   );
 };
