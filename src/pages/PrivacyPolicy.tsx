@@ -15,7 +15,7 @@ const PrivacyPolicy = () => {
       <AnnouncementBar />
       <Header />
       
-      <main className="pt-40 pb-20">
+      <main className="pt-52 pb-20">
         <div className="container mx-auto px-4">
           <h1 className="text-3xl md:text-4xl font-bold text-ukb-darkblue mb-8">Privacy Policy</h1>
           
