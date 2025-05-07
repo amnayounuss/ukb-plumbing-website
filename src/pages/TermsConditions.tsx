@@ -5,10 +5,10 @@ import Footer from '@/components/Footer';
 import AnnouncementBar from '@/components/AnnouncementBar';
 
 const TermsConditions = () => {
-  useEffect(() => {
-    document.title = "Terms & Conditions - UKB Plumbing - Emergency Plumbing Services";
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   document.title = "Terms & Conditions - UKB Plumbing - Emergency Plumbing Services";
+  //   window.scrollTo(0, 0);
+  // }, []);
 
   return (
     <div className="min-h-screen bg-white">

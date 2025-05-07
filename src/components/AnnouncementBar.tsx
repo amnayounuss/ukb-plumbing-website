@@ -64,10 +64,6 @@ const AnnouncementBar = () => {
   return <div className={cn("py-2 sticky top-0 z-[60] transition-transform duration-500 ease-out overflow-hidden", isVisible ? "translate-x-0" : "-translate-x-full", isLight ? "bg-white text-ukb-darkblue" : "bg-ukb-blue text-white")}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-center md:justify-between">
-          <div className="hidden md:flex items-center">
-            <Phone size={20} className="mr-2" />
-            <span>Emergency Plumbing Services</span>
-          </div>
           
           <div className="flex-1 overflow-hidden">
             <div className="marquee-container">

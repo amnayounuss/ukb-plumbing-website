@@ -23,7 +23,7 @@ const Footer = () => {
               Professional plumbing services in Southampton and surrounding areas. Available 24/7 for all your plumbing needs.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-white/70 hover:text-white transition-colors" aria-label="Facebook">
+              <a href="https://www.facebook.com/share/196J65W6BF/" target='blank' className="text-white/70 hover:text-white transition-colors" aria-label="Facebook">
                 <Facebook size={20} />
               </a>
               <a href="#" className="text-white/70 hover:text-white transition-colors" aria-label="Twitter">

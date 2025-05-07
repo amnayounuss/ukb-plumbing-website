@@ -41,25 +41,25 @@ const Index = () => {
   }, []);
 
   // Scroll animation handler
-  useEffect(() => {
-    const handleScroll = () => {
-      const elements = document.querySelectorAll('.animate-fade-in');
-      elements.forEach(element => {
-        const elementPosition = element.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const elements = document.querySelectorAll('.animate-fade-in');
+  //     elements.forEach(element => {
+  //       const elementPosition = element.getBoundingClientRect();
+  //       const windowHeight = window.innerHeight;
         
-        if (elementPosition.top < windowHeight * 0.9) {
-          element.classList.add('opacity-100');
-        }
-      });
-    };
+  //       if (elementPosition.top < windowHeight * 0.9) {
+  //         element.classList.add('opacity-100');
+  //       }
+  //     });
+  //   };
     
-    window.addEventListener('scroll', handleScroll);
-    // Trigger on initial load
-    handleScroll();
+  //   window.addEventListener('scroll', handleScroll);
+  //   // Trigger on initial load
+  //   handleScroll();
     
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, []);
   
   return (
     <div className="min-h-screen bg-white">
@@ -70,7 +70,7 @@ const Index = () => {
       <ServicesSection />
       <BrandCarousel />
       <WhyChooseUs />
-      <GoogleReviews />
+      {/* <GoogleReviews /> */}
       <AboutUs />
       <Testimonials />
       <CallToAction />
