@@ -12,8 +12,6 @@ import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 import BrandCarousel from '@/components/BrandCarousel';
 import AnnouncementBar from '@/components/AnnouncementBar';
-import GoogleReviews from '@/components/GoogleReviews';
-import LiveChat from '@/components/LiveChat';
 
 const Index = () => {
   // Update document title and meta tags
@@ -76,7 +74,6 @@ const Index = () => {
       <CallToAction />
       <ContactSection />
       <Footer />
-      <LiveChat />
       
       {/* Scroll to top button */}
       <button
