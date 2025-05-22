@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -142,34 +143,37 @@ const ServicesSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {servicesList.map((service, index) => (
-            <Link 
-              to={`/services/${service.slug}`}
-              key={service.id}
-              className="group bg-white rounded-lg overflow-hidden shadow-subtle card-hover"
-              onMouseEnter={() => setHoveredService(service.id)}
-              onMouseLeave={() => setHoveredService(null)}
-              style={{
-                animationDelay: `${index * 100}ms`,
-              }}
-            >
-              <div className="relative h-48 overflow-hidden">
-                <img 
-                  src={service.image} 
-                  alt={service.title} 
-                  className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-ukb-blue/40 group-hover:bg-ukb-blue/30 transition-colors duration-300"></div>
-                <div className="absolute top-4 left-4 bg-white/90 rounded-full p-2 backdrop-blur-sm">
-                  {service.icon}
+          {servicesList.map((service, index) => {
+            const IconComponent = service.icon;
+            return (
+              <Link 
+                to={`/services/${service.slug}`}
+                key={service.id}
+                className="group bg-white rounded-lg overflow-hidden shadow-subtle card-hover"
+                onMouseEnter={() => setHoveredService(service.id)}
+                onMouseLeave={() => setHoveredService(null)}
+                style={{
+                  animationDelay: `${index * 100}ms`,
+                }}
+              >
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={service.image} 
+                    alt={service.title} 
+                    className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-ukb-blue/40 group-hover:bg-ukb-blue/30 transition-colors duration-300"></div>
+                  <div className="absolute top-4 left-4 bg-white/90 rounded-full p-2 backdrop-blur-sm">
+                    <IconComponent className="w-12 h-12 text-ukb-blue" />
+                  </div>
                 </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-3 text-ukb-darkblue">{service.title}</h3>
-                <p className="text-ukb-darkgray">{service.description}</p>
-              </div>
-            </Link>
-          ))}
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-3 text-ukb-darkblue">{service.title}</h3>
+                  <p className="text-ukb-darkgray">{service.description}</p>
+                </div>
+              </Link>
+            );
+          })}
         </div>
         
         <div className="mt-12 text-center">

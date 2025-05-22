@@ -11,12 +11,9 @@ import { servicesList } from '@/data/servicesData';
 const ServicePage = () => {
   const { serviceName } = useParams();
   const navigate = useNavigate();
-  const decodedServiceName = serviceName ? decodeURIComponent(serviceName) : '';
   
-  // Find the service based on the URL parameter
-  const service = servicesList.find(
-    s => s.title.toLowerCase() === decodedServiceName.toLowerCase()
-  );
+  // Find the service based on the URL slug parameter
+  const service = servicesList.find(s => s.slug === serviceName);
 
   // Redirect to 404 if service not found
   useEffect(() => {
@@ -72,7 +69,7 @@ const ServicePage = () => {
         <div className="container mx-auto px-4 py-32 text-center">
           <h1 className="text-3xl font-bold mb-6 text-ukb-darkblue">Service Not Found</h1>
           <p className="text-lg text-ukb-darkgray mb-8">The service you're looking for doesn't exist. Please check our available services.</p>
-          <a href="/#services" className="bg-ukb-blue text-white py-3 px-6 rounded-md hover:bg-ukb-darkblue transition-colors">
+          <a href="/services" className="bg-ukb-blue text-white py-3 px-6 rounded-md hover:bg-ukb-darkblue transition-colors">
             View All Services
           </a>
         </div>
