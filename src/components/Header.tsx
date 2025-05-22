@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, X, Phone } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -26,13 +27,13 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
-        <a href="/" className="flex items-center">
+        <Link to="/" className="flex items-center">
           <img
             src={isScrolled ? "/lovable-uploads/7dc16efa-a747-4593-ae00-6e7e38c4d44e.png" : "/lovable-uploads/7dc16efa-a747-4593-ae00-6e7e38c4d44e.png"}
             alt="Logo"
             className="h-16 md:h-15 lg:h-14 w-auto object-contain"
           />
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav
@@ -41,10 +42,10 @@ const Header = () => {
             !isScrolled ? "text-ukb-darkblue" : "text-ukb-darkblue"
           )}
         >
-          <a href="/" className="font-medium hover:text-ukb-blue transition-colors">Home</a>
-          <a href="/#services" className="font-medium hover:text-ukb-blue transition-colors">Services</a>
+          <Link to="/" className="font-medium hover:text-ukb-blue transition-colors">Home</Link>
+          <Link to="/services" className="font-medium hover:text-ukb-blue transition-colors">Services</Link>
           <a href="/#about" className="font-medium hover:text-ukb-blue transition-colors">About Us</a>
-          <a href="/booking" className="flex items-center gap-2 font-medium bg-ukb-blue text-white py-2 px-4 rounded-md hover:bg-ukb-darkblue transition-colors">Book Now</a>
+          <Link to="/booking" className="flex items-center gap-2 font-medium bg-ukb-blue text-white py-2 px-4 rounded-md hover:bg-ukb-darkblue transition-colors">Book Now</Link>
           <a
             href="tel:07359605766"
             className="flex items-center gap-2 font-medium bg-ukb-blue text-white py-2 px-4 rounded-md hover:bg-ukb-darkblue transition-colors"
@@ -81,24 +82,24 @@ const Header = () => {
         </button>
 
         <nav className="flex flex-col space-y-6 text-center">
-          <a href="/" className="font-medium text-xl text-ukb-darkblue py-2 border-b border-gray-100" onClick={() => setIsMenuOpen(false)}>
+          <Link to="/" className="font-medium text-xl text-ukb-darkblue py-2 border-b border-gray-100" onClick={() => setIsMenuOpen(false)}>
             Home
-          </a>
-          <a href="/#services" className="font-medium text-xl text-ukb-darkblue py-2 border-b border-gray-100" onClick={() => setIsMenuOpen(false)}>
+          </Link>
+          <Link to="/services" className="font-medium text-xl text-ukb-darkblue py-2 border-b border-gray-100" onClick={() => setIsMenuOpen(false)}>
             Services
-          </a>
+          </Link>
           <a href="/#about" className="font-medium text-xl text-ukb-darkblue py-2 border-b border-gray-100" onClick={() => setIsMenuOpen(false)}>
             About Us
           </a>
           <a href="/#contact" className="font-medium text-xl text-ukb-darkblue py-2 border-b border-gray-100" onClick={() => setIsMenuOpen(false)}>
             Contact
           </a>
-          <a href="/privacy-policy" className="font-medium text-xl text-ukb-darkblue py-2 border-b border-gray-100" onClick={() => setIsMenuOpen(false)}>
+          <Link to="/privacy-policy" className="font-medium text-xl text-ukb-darkblue py-2 border-b border-gray-100" onClick={() => setIsMenuOpen(false)}>
             Privacy Policy
-          </a>
-          <a href="/terms-conditions" className="font-medium text-xl text-ukb-darkblue py-2 border-b border-gray-100" onClick={() => setIsMenuOpen(false)}>
+          </Link>
+          <Link to="/terms-conditions" className="font-medium text-xl text-ukb-darkblue py-2 border-b border-gray-100" onClick={() => setIsMenuOpen(false)}>
             Terms & Conditions
-          </a>
+          </Link>
           <a
             href="tel:07359605766"
             className="flex items-center justify-center gap-2 font-medium bg-ukb-blue text-white py-3 px-6 rounded-md mt-4"

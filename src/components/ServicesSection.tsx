@@ -1,70 +1,10 @@
-
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { 
-  Droplet, WrenchIcon, Radiation, FlameKindling, 
-  PenLineIcon, Bath, ShowerHead, Clock,
   BadgeCheck, ThumbsUp, Star
 } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-
-const services = [
-  {
-    id: 1,
-    title: "Emergency Plumbing Repairs",
-    description: "Fast response to all emergency plumbing issues, including burst pipes, leaks, and fixture failures.",
-    icon: <WrenchIcon className="w-12 h-12 text-ukb-blue" />,
-    image: "/lovable-uploads/emergency.png"
-  },
-  {
-    id: 2,
-    title: "Blocked Drain Cleaning",
-    description: "Professional removal of blockages in sinks, toilets, showers, and main drainage systems.",
-    icon: <PenLineIcon className="w-12 h-12 text-ukb-blue" />,
-    image: "/lovable-uploads/drain.png"
-  },
-  {
-    id: 3,
-    title: "Water Leak Repairs",
-    description: "Detection and repair of visible and hidden water leaks to prevent property damage and water waste.",
-    icon: <Droplet className="w-12 h-12 text-ukb-blue" />,
-    image: "https://img.freepik.com/free-photo/worker-repairing-water-heater_23-2149334230.jpg?t=st=1742245177~exp=1742248777~hmac=c3bc85399d2b401c7026c4fd425d875360c2326426d9c6b2d74a402f62bcf331&w=996"
-  },
-  {
-    id: 4,
-    title: "Radiator Repairs",
-    description: "Expert repair, installation, and maintenance of all types of radiators and heating systems.",
-    icon: <Radiation className="w-12 h-12 text-ukb-blue" />,
-    image: "https://img.freepik.com/free-photo/worker-repairing-water-heater_23-2149334227.jpg?t=st=1742245236~exp=1742248836~hmac=1bef076b643196b2f779e52cf55e6b1b4ea06113f8e8ba3103ad965cac6aa5d8&w=996"
-  },
-  {
-    id: 5,
-    title: "Boiler Installation & Repair",
-    description: "Professional installation, repair, and servicing of all boiler types to ensure efficient and safe operation.",
-    icon: <FlameKindling className="w-12 h-12 text-ukb-blue" />,
-    image: "https://img.freepik.com/free-photo/man-installs-heating-system-house-checks-pipes-with-wrench_169016-55834.jpg?t=st=1742245280~exp=1742248880~hmac=196e62ab5af064c38cde6b119405a6bd13c7f67e78591e74f696156d033644e6&w=996"
-  },
-  {
-    id: 6,
-    title: "Pipe Repairs & Replacement",
-    description: "Expert repair and replacement of damaged, burst, or corroded pipes using high-quality materials.",
-    icon: <PenLineIcon className="w-12 h-12 text-ukb-blue" />,
-    image: "https://img.freepik.com/free-photo/plumber-assembling-pipe_1098-17772.jpg?t=st=1742245330~exp=1742248930~hmac=b8276909a92e0208159891b0e10240466e858e292c675cbdfe4aa9257f2a594a&w=996"
-  },
-  {
-    id: 7,
-    title: "Bathroom & Kitchen Plumbing",
-    description: "Installation and repair of all bathroom and kitchen fixtures, including sinks, toilets, showers, and appliances.",
-    icon: <ShowerHead className="w-12 h-12 text-ukb-blue" />,
-    image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-  },
-  {
-    id: 8,
-    title: "24/7 Emergency Call-Out",
-    description: "Round-the-clock availability for emergencies, ensuring you never have to wait for urgent plumbing assistance.",
-    icon: <Clock className="w-12 h-12 text-ukb-blue" />,
-    image: "https://img.freepik.com/free-vector/24-hour-everyday-service-sticker-design_1017-38078.jpg?t=st=1742245388~exp=1742248988~hmac=5cea157720c7db9f9761c319de5f650f8a5df2f383b754b71daccbc492d94258&w=826"
-  }
-];
+import { servicesList } from '@/data/servicesData';
 
 // Client work showcase images
 const clientWorkImages = [
@@ -202,8 +142,9 @@ const ServicesSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, index) => (
-            <div 
+          {servicesList.map((service, index) => (
+            <Link 
+              to={`/services/${service.slug}`}
               key={service.id}
               className="group bg-white rounded-lg overflow-hidden shadow-subtle card-hover"
               onMouseEnter={() => setHoveredService(service.id)}
@@ -227,8 +168,17 @@ const ServicesSection = () => {
                 <h3 className="text-xl font-semibold mb-3 text-ukb-darkblue">{service.title}</h3>
                 <p className="text-ukb-darkgray">{service.description}</p>
               </div>
-            </div>
+            </Link>
           ))}
+        </div>
+        
+        <div className="mt-12 text-center">
+          <Link 
+            to="/services" 
+            className="inline-flex items-center justify-center bg-ukb-blue text-white py-3 px-6 rounded-md hover:bg-ukb-darkblue transition-colors"
+          >
+            View All Services
+          </Link>
         </div>
       </div>
     </section>
