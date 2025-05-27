@@ -2,10 +2,8 @@
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import './globals.css';
-
-const queryClient = new QueryClient();
+import { ReactQueryProvider } from '@/components/ReactQueryProvider';
 
 export default function RootLayout({
   children,
@@ -15,13 +13,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <QueryClientProvider client={queryClient}>
+        <ReactQueryProvider>
           <TooltipProvider>
             <Toaster />
             <Sonner />
             {children}
           </TooltipProvider>
-        </QueryClientProvider>
+        </ReactQueryProvider>
       </body>
     </html>
   );
