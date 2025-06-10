@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { 
   BadgeCheck, ThumbsUp, Star
 } from 'lucide-react';
@@ -147,7 +146,7 @@ const ServicesSection = () => {
             const IconComponent = service.icon;
             return (
               <Link 
-                href={`/services/${service.slug}`}
+                to={`/services/${service.slug}`}
                 key={service.id}
                 className="group bg-white rounded-lg overflow-hidden shadow-subtle card-hover"
                 onMouseEnter={() => setHoveredService(service.id)}
@@ -178,7 +177,7 @@ const ServicesSection = () => {
         
         <div className="mt-12 text-center">
           <Link 
-            href="/services" 
+            to="/services" 
             className="inline-flex items-center justify-center bg-ukb-blue text-white py-3 px-6 rounded-md hover:bg-ukb-darkblue transition-colors"
           >
             View All Services

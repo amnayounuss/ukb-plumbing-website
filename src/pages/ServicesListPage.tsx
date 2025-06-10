@@ -1,6 +1,5 @@
-
 import React, { useEffect } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { servicesList } from '@/data/servicesData';
@@ -29,7 +28,7 @@ const ServicesListPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {servicesList.map((service) => (
             <Link 
-              href={`/services/${service.slug}`} 
+              to={`/services/${service.slug}`} 
               key={service.id}
               className="group bg-white rounded-lg overflow-hidden shadow-subtle hover:shadow-lg transition-all duration-300"
             >

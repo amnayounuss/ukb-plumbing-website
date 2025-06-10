@@ -1,8 +1,7 @@
-
 'use client';
 
 import React, { useEffect } from 'react';
-import { useParams, useRouter } from 'next/navigation';
+import { useParams, useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ServicesHero from '@/components/ServicesHero';
@@ -11,9 +10,8 @@ import CallToAction from '@/components/CallToAction';
 import { servicesList } from '@/data/servicesData';
 
 const ServicePage = () => {
-  const params = useParams();
-  const router = useRouter();
-  const serviceName = params?.serviceName as string;
+  const { serviceName } = useParams();
+  const navigate = useNavigate();
   
   // Find the service based on the URL slug parameter
   const service = servicesList.find(s => s.slug === serviceName);
@@ -21,9 +19,9 @@ const ServicePage = () => {
   // Redirect to 404 if service not found
   useEffect(() => {
     if (!service && serviceName) {
-      router.push('/not-found');
+      navigate('/not-found');
     }
-  }, [service, serviceName, router]);
+  }, [service, serviceName, navigate]);
 
   // Update document title with service name
   useEffect(() => {
