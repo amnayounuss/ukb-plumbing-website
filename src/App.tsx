@@ -10,6 +10,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from '@/pages/Index';
 import ServicesListPage from '@/pages/ServicesListPage';
 import ServicePage from '@/pages/ServicePage';
+import PortfolioPage from '@/pages/PortfolioPage';
 import Booking from '@/pages/Booking';
 import NotFound from '@/pages/NotFound';
 import PrivacyPolicy from '@/pages/PrivacyPolicy';
@@ -23,6 +24,7 @@ function App() {
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<ServicesListPage />} />
           <Route path="/services/:serviceName" element={<ServicePage />} />
+          <Route path="/portfolio" element={<PortfolioPage />} />
           <Route path="/booking" element={<Booking />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-conditions" element={<TermsConditions />} />

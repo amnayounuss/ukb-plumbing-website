@@ -44,6 +44,7 @@ const Header = () => {
         >
           <Link to="/" className="font-medium hover:text-ukb-blue transition-colors">Home</Link>
           <Link to="/services" className="font-medium hover:text-ukb-blue transition-colors">Services</Link>
+          <Link to="/portfolio" className="font-medium hover:text-ukb-blue transition-colors">Portfolio</Link>
           <a href="/#about" className="font-medium hover:text-ukb-blue transition-colors">About Us</a>
           <Link to="/booking" className="flex items-center gap-2 font-medium bg-ukb-blue text-white py-2 px-4 rounded-md hover:bg-ukb-darkblue transition-colors">Book Now</Link>
           <a
@@ -87,6 +88,9 @@ const Header = () => {
           </Link>
           <Link to="/services" className="font-medium text-xl text-ukb-darkblue py-2 border-b border-gray-100" onClick={() => setIsMenuOpen(false)}>
             Services
+          </Link>
+          <Link to="/portfolio" className="font-medium text-xl text-ukb-darkblue py-2 border-b border-gray-100" onClick={() => setIsMenuOpen(false)}>
+            Portfolio
           </Link>
           <a href="/#about" className="font-medium text-xl text-ukb-darkblue py-2 border-b border-gray-100" onClick={() => setIsMenuOpen(false)}>
             About Us
