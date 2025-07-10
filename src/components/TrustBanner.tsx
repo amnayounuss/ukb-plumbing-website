@@ -31,7 +31,7 @@ const TrustBanner = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {trustPoints.map((point, index) => (
             <div key={index} className="flex items-center justify-center space-x-3">
-              <point.icon className="h-8 w-8 text-ukb-yellow flex-shrink-0" />
+              <point.icon className="h-8 w-8 text-accent flex-shrink-0" />
               <div className="text-center md:text-left">
                 <h3 className="font-semibold text-lg">{point.title}</h3>
                 <p className="text-gray-300 text-sm hidden md:block">{point.description}</p>

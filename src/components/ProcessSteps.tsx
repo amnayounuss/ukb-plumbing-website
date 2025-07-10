@@ -39,7 +39,7 @@ const ProcessSteps = () => {
           {steps.map((step, index) => (
             <div key={index} className="text-center bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <div className="mb-6">
-                <div className="w-20 h-20 bg-ukb-red rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
                   <step.icon className="h-10 w-10 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
