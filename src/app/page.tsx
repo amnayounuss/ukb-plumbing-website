@@ -11,6 +11,8 @@ import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 import BrandCarousel from '@/components/BrandCarousel';
 import AnnouncementBar from '@/components/AnnouncementBar';
+import TrustBanner from '@/components/TrustBanner';
+import ProcessSteps from '@/components/ProcessSteps';
 
 export default function HomePage() {
   return (
@@ -18,8 +20,10 @@ export default function HomePage() {
       <AnnouncementBar />
       <Header />
       <HeroSection />
+      <TrustBanner />
       <ServiceBanner />
       <ServicesSection />
+      <ProcessSteps />
       <BrandCarousel />
       <WhyChooseUs />
       <AboutUs />
